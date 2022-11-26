@@ -1,0 +1,294 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f7f5f2;
+    font-size: 18px;
+}
+
+.title{font-weight: bold; font-size: 34px;}
+
+h1{
+    color: #05245b;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+
+/*          NAV Part          */
+.nav-wrapper{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.nav-wrapper .nav{
+    display: inline-block;
+    width: 100%;
+}
+
+.nav-wrapper .nav .nav-left{
+    float: left;
+    display: inline-block;
+    padding: 20px 0;
+}
+
+.nav-wrapper .nav .nav-left .lecture-logo{
+    font-size: 56px;
+    line-height: 50px;
+    text-decoration: none;
+    margin: 0 20px 0 0;
+}
+
+.nav-wrapper .nav .nav-left .lecture-logo:hover, .nav-wrapper .nav .nav-left .lecture-logo:focus, .nav-wrapper .nav .nav-left .lecture-logo:visited{color: #FF7F50;}
+
+.nav-wrapper .nav .nav-left ul{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-wrapper .nav .nav-left ul li{
+    float: left;
+    line-height: 1;
+    padding: 0 20px 0 0;
+}
+
+.nav-wrapper .nav .nav-left ul li a{
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.nav-wrapper .nav .nav-left ul li a, .nav-wrapper .nav .nav-left ul li a:hover .nav-wrapper .nav .nav-left ul li a:focus, .nav-wrapper .nav .nav-left ul li a:visited{
+    color: #05245b;  
+}
+
+
+.nav-wrapper .nav .nav-right{
+    float: right;
+    display: inline-block;
+}
+
+.img-wrapper{
+    height: 90px;
+}
+
+.img-wrapper img{
+    height: 100%;
+}
+
+
+.burger{display: none;}
+
+
+
+
+
+
+
+
+/*          Content Part          */
+.content{
+    padding: 0 0 0 30px;
+}
+
+.content .content-title{
+    font-size: 24px;
+    margin: 20px 0 10px 0;
+}
+
+.schedule,.grade-table{margin: 0;}
+
+.schedule, .schedule tr, .schedule tr th, .schedule tr td{}
+
+.schedule tr{}
+
+.schedule tr:nth-child(even) ,.grade-table tr:nth-child(even){
+    background: cadetblue;
+}
+
+.schedule tr th{}
+
+.schedule tr td:nth-child(1), .grade-table tr td:nth-child(1){
+    text-align: center;
+}
+
+.schedule tr td, .grade-table tr td{
+    padding: 7px 25px;
+    text-align: left;
+}
+
+.schedule tr td:nth-child(4){
+    padding: 7px 15px 7px 30px;
+}
+
+hr{margin: 25px 0;border-top-color: #DC143C;}
+
+
+
+.content .assignment{
+    display: inline-block;
+    margin: 20px 0 40px 0;
+}
+.content .assignment span{
+    display: block;
+    font-size: 30px;
+    padding: 0 0 6px 0;
+    margin: 0 0 10px 0;
+    opacity: 0.7;
+    font-weight: bold;
+}
+.content .assignment span:hover{
+    padding: 0 0 4px 0;
+    color: #DC143C;
+    border-bottom: 2px solid #DC143C;
+    opacity: 1;
+    cursor: zoom-in;
+}
+.content .assignment p{
+    overflow: hidden;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    transition: opacity .8s ease-in;
+}
+.content .assignment.active p{
+    height: auto;
+    opacity: 1;
+}
+
+.content .assignment.active span{
+    opacity: 1;
+    cursor: zoom-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+    h1{font-size: 28px;}
+    .schedule tr td{padding: 7px 10px;}
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 992px){
+    h1{font-size: 22px;}
+    .schedule tr:nth-child(even){
+        background-color: initial;
+    }
+    .schedule{border:none;}
+    .schedule tr{
+        display: grid;
+        padding: 0 0 30px 0;
+        grid-template-columns: 70px auto;
+    }
+    .schedule tr th{display: none;}
+    .schedule tr td, .schedule tr td:nth-child(4){
+        display: block;
+        text-align: left;
+        padding: 10px 15px;
+        border: none;
+        font-size: 24px;
+        grid-column: 2/2;
+        border-left: 2px solid #DC143C;
+    }
+    .schedule tr td:nth-child(1){
+        font-weight: bold;
+        font-size: 28px;
+        border: none;
+        padding: 0;
+        grid-column: 1/1;
+        grid-row: 1/4;
+        align-self: center;
+    }
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    .schedule tr{
+        grid-template-columns: 40px auto;
+    }
+    .nav-wrapper .nav{}
+    .nav-wrapper .nav .nav-left ul{
+        position: absolute;
+        top: 170px;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        display: inline-block;
+        padding: 0;
+        background-color:#FF7F50;
+        height: 0px;
+        overflow: hidden;
+        transition: height .5s linear;
+    }
+    .nav-wrapper .nav .nav-left ul.opened{
+        height: 190px;
+        padding: 0;
+    }
+    .nav-wrapper .nav .nav-left ul li{
+        float: none;
+        margin: 10px 0;
+        padding: 0;
+    }
+    .nav-wrapper .nav .nav-left ul li a{display: block;padding: 5px 0 5px 15px;}
+    .nav-wrapper .nav .nav-left ul li a, .nav-wrapper .nav .nav-left ul li a:focus, .nav-wrapper .nav .nav-left ul li a:visited{
+        color: #f7f5f2;
+    }
+    .nav-wrapper .nav .nav-left ul li a:hover{
+        background-color: #f7f5f2;
+        color: #05245b;
+    }
+
+    .schedule tr td:nth-child(1){
+        text-align: left;
+    }
+
+    .burger{
+        display: inline-block;
+        margin: 0 0 3px 0px;
+    }
+    .burger i{
+        display: block;
+        position: relative;
+        height: 3px;
+        width: 30px;
+        margin: 0 0 10px 0;
+    }
+    .burger i:last-child{
+        margin: 0;
+    }
+
+    .burger i::before{
+        position: absolute;
+        content: " ";
+        width: 30px;
+        height: 3px;
+        background-color: #DC143C;
+    }
+
+    .content p{padding: 0 30px 0 0;}
+}
