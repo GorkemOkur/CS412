@@ -77,7 +77,7 @@ function hhh(url){
                 // redirect the user to the CALENDAR page
                 // replace function delete the history, therefore user cannot use back butto to return previous page.
                 // assign do not delete history. !!
-                window.location.replace("/calendar.html");
+                window.location.replace("calendar.html");
 
             }else if(this.readyState == 4 && this.status == 404){
                 throw(`The url you have entered(${url}) is wrong or deleted.`);
