@@ -351,6 +351,10 @@ https://css-tricks.com/almanac/selectors/n/nth-child/
     }
 
     .content p{padding: 0 30px 0 0;}
+
+    .cal-upload #fetch-btn{
+        margin: 10px 0 0 0;
+    }
 }
 
 
