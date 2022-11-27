@@ -228,9 +228,6 @@ hr{margin: 25px 0;border-top-color: #DC143C;}
 
 
 @media only screen and (max-width: 768px){
-    html{
-        display: flex;
-    }
     .schedule tr{
         grid-template-columns: 40px auto;
     }
