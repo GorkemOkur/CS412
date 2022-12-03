@@ -10,15 +10,11 @@ window.onload = function(){
             nav.classList.add("active");
             mobileButton.classList.remove("fa-bars");
             mobileButton.classList.add("fa-x");
-            console.log("EVET");
         }else{
             nav.classList.remove("active");
             mobileButton.classList.remove("fa-x");
             mobileButton.classList.add("fa-bars");
-            console.log("HAYIR");
         }
-
-        
     });
 //  fa-bars  fa-x  
 };
