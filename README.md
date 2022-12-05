@@ -1,4 +1,4 @@
 # CS412
 
-It's a repository for providing the DATA for course CS412 project and also used for publish the projects.
+It's a repository for course CS412 projects and also used for publishing the projects.
 
